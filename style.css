@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/*
+Theme Name: Bootstrap 4 Starter
+Theme URI: https://wordpress.org/themes/twentynineteen/
+Author: the WordPress team
+Author URI: https://github.com/gabrielhrp31
+Description: A simple theme with wirdpress to start our design!
+Requires at least: WordPress 4.9.6
+Version: 1.0
+Text Domain: bootstrap4-starter
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images,
+*/
+
+@import "css/icofont.css";
+
+#wpadminbar{
+    display: none;
+}
+
+/*                      sidenav                       */
+@media only screen and (max-width:992px){
+
+    #navbarNav{
+        left: 0;
+        top:0;
+        transition: .1s!important;
+        transform: translateX(-100%) translateY(0);
+        position: fixed;
+        width: 80%;
+        margin: 0!important;
+        padding: 0!important;
+        height: 100%!important;
+        z-index: 1000;
+        background-color: #e6e6e6;
+    }
+
+    
+    #navbarNav .custom-logo{
+        width: 70%;
+        margin:10px auto;
+    }
+
+    #navbarNav .custom-logo-link{
+        width: 100%;
+        display: flex;
+        justify-content: center
+    }
+
+    .menu-item{
+        width: 100%;
+        padding:10px 20px;
+        border-top: 1px solid rgba(0,0,0,.15);
+        border-radius: unset;
+    }
+
+
+    .dropdown-menu{
+        background-color: transparent;
+        border:none;
+        padding: .1rem;
+    }
+
+
+    .overlay{
+        left: 0;
+        top:0;
+        z-index: 999;
+        transition: .05s!important;
+        transform: translateX(-100%) translateY(0);
+        position: fixed;
+        height: 100%;
+        width: 100%!important;
+        background-color:rgba(0, 0, 0, 0.3)!important;
+    }
+
+    .show-sidebar{
+        left: 0;
+        top:0;
+        transform: translateX(0) translateY(0)!important;
+        background-color: #e6e6e6;
+    }
+
+    .show{
+        left: 0;
+        top:0;
+        transform: translateX(0) translateY(0)!important;
+        position: absolute;
+    }
+    .show ul a{
+        background-color: #e6e6e6;
+        color: black!important;
+    }
+
+    .close{
+        max-width: 20%;
+    }
+}
+
+/*------------------------------ #navbar ----------------------*/
+.bg-transparent{
+    background-color: rgba(0,0,0,.3)!important;
+}
+
+.navbar{
+    position: fixed;
+    z-index: 100;
+}
+
+.custom-logo{
+    width: 100%;
+    height: auto;
+}
+
+.custom-logo-link{
+    width: 30%;
+    height: auto;
+}
+
+
+
+@media only screen and (min-width:992px){
+    .custom-logo{
+        width: 20vw;
+        height: auto;
+    }
+
+    .nav-item{
+        font-size: 1.5rem !important;
+        padding:0 1.5rem !important;
+    }
+}
+
+/*------------------------------ #carousel ----------------------*/
+.carousel-item img{
+    -webkit-filter: grayscale(40%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(40%);
+  }
