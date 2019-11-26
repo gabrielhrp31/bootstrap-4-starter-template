@@ -18,11 +18,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?php bloginfo("stylesheet_url");?>">
     <title><?php echo bloginfo("name") ?></title>
+	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-transparent w-100  d-flex align-items-center px-4">
 		
 			<?php if(has_custom_logo()):
@@ -31,7 +33,7 @@
 					<a class="navbar-brand" href="#">
 						<?php echo bloginfo("name"); ?>
 					</a>;
-				<?php endif 
+				<?php endif;
 			?>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<i class="icofont-navigation-menu text-white"></i>

@@ -92,3 +92,11 @@ function new_excerpt_more($more) {
 	return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+// Register Theme Features
+function custom_theme_features()  {
+
+	// Add theme support for Post Formats
+	add_theme_support( 'post-formats', array( 'status', 'quote', 'gallery', 'image', 'video', 'audio', 'link', 'aside', 'chat' ) );
+}
+add_action( 'after_setup_theme', 'custom_theme_features' );

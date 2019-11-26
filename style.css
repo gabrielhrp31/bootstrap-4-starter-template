@@ -13,10 +13,6 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
 
 @import "css/icofont.css";
 
-#wpadminbar{
-    display: none;
-}
-
 /*                      sidenav                       */
 @media only screen and (max-width:992px){
 
@@ -131,6 +127,31 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
 }
 
 /*------------------------------ #carousel ----------------------*/
+.carousel{
+    overflow-y: hidden;
+    height: 200px;
+}
+
+.carousel-inner{
+    height: 100%;
+}
+
+@media only screen and (min-width:768px){
+    .carousel{
+        height: 300px;
+    }
+}
+
+
+@media only screen and (min-width:992px){
+    .carousel{
+        height: 600px;
+    }
+    .carousel-item{
+        height: 100%;
+    }
+}
+
 .carousel-item img{
     -webkit-filter: grayscale(40%); /* Safari 6.0 - 9.0 */
     filter: grayscale(40%);
